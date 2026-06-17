@@ -1,0 +1,3 @@
+# Cached source dictionary (re-downloaded by build/build-wordlists.mjs on demand).
+build/words_alpha.txt
+.DS_Store

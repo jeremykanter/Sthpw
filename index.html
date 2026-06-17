@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sthpw</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css?v=5" />
+    </head>
+    <body>
+        <main class="app">
+            <header class="header">
+                <h1 class="title">
+                    <span class="title-left">Sth</span
+                    ><span class="title-right">pw</span>
+                </h1>
+                <p class="pronunciation">/ˈsaʊθˌpɔ/</p>
+                <div class="heading-divider"></div>
+                <p class="tagline">
+                    Memorable passwords divided between your
+                    <span class="title-left">left</span> and
+                    <span class="title-right">right</span>
+                    hands.
+                </p>
+            </header>
+
+            <section class="controls" aria-label="Generator settings">
+                <button id="generate" class="generate-btn" type="button">
+                    Generate
+                </button>
+            </section>
+
+            <p id="error" class="error" role="alert" hidden></p>
+
+            <section id="results" class="results" aria-live="polite"></section>
+
+            <footer class="footer">
+                <p>
+                    Each half of the password uses only one hand on a QWERTY
+                    keyboard. Passwords are generated locally in your
+                    browser—nothing is stored or sent anywhere. These passwords
+                    are meant to be memorable and fun to type, but if security
+                    is your priority, please consider using a more robust
+                    password.
+                </p>
+            </footer>
+        </main>
+
+        <!-- Word lists first, then app logic. Both plain <script> tags so the page
+         works when opened directly from disk (file://) with no server. -->
+        <script src="wordlists.js"></script>
+        <script src="app.js?v=4"></script>
+    </body>
+</html>
