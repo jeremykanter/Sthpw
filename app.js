@@ -1,7 +1,6 @@
 "use strict";
 
-/* Sthpw — two-handed password generator.
- * Pure browser JS. LEFT_WORDS / RIGHT_WORDS come from wordlists.js. */
+/* Sthpw. LEFT_WORDS / RIGHT_WORDS come from wordlists.js. */
 
 // --- Easily tunable knobs ------------------------------------------------
 const DEFAULTS = {
