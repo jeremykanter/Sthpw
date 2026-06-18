@@ -1,14 +1,13 @@
 # Sthpw
 
-Memorable passwords divided between your left and right hands on a QWERTY keyboard.
+Passwords that are memorable and fun to type.
 
-Each password combines:
+Sthpw has two modes:
+- Sthpw mode, where passwords are split between the left and right halves of the keyboard
+- Fstball mode, where passwords are balanced across both halves of the keyboard to optimize for typing speed
 
-- one **left-hand** word and number
-- one **right-hand** word and number
-- one word in **ALL CAPS** with the number changed to its shift-symbol
-- one word in **lowercase** with a plain number
+In both modes, passwords are composed of:
+- one **lowercase** word and number
+- one **UPPERCASE** word and symbol
 
-Sthpw is pure static HTML/CSS/JS. Passwords are generated locally in the browser—nothing is stored or sent anywhere.
-
-These passwords are meant to be memorable and fun to type, but if security is your priority, please consider using a more robust password.
+All passwords are generated locally in your browser using HTML, CSS, and JavaScript. Nothing is ever stored or sent anywhere. These passwords are meant to be memorable and fun to type. If security is your priority, please consider using a more robust password.

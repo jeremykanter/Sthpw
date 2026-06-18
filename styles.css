@@ -8,6 +8,8 @@
     --accent-hover: #0f0f0f;
     --accent-left: #ff4dff;
     --accent-right: #e5a82e;
+    --accent-a: #000000;
+    --accent-b: #666666;
     --error: #ff3333;
     --radius: 6px;
 }
@@ -15,7 +17,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #000000;
-        --panel: #080808;
+        --panel: #1a1a1a;
         --border: #333333;
         --text: #ffffff;
         --muted: #999999;
@@ -23,6 +25,8 @@
         --accent-hover: #f0f0f0;
         --accent-left: #ff66ff;
         --accent-right: #f2ba49;
+        --accent-a: #ffffff;
+        --accent-b: #999999;
         --error: #ff4d4d;
     }
 }
@@ -55,7 +59,48 @@ body {
     padding: 40px 20px 80px;
 }
 
-/* Header */
+/* Header / mode toggle */
+.mode-toggle {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.mode-card {
+    flex: 1 1 0;
+    padding: 16px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    opacity: 0.5;
+    transition:
+        opacity 0.15s ease,
+        border-color 0.15s ease,
+        background 0.15s ease;
+}
+
+.mode-card:hover {
+    opacity: 1;
+    background: var(--panel);
+}
+
+.mode-card[aria-selected="true"] {
+    opacity: 1;
+    background: var(--panel);
+    border-color: var(--text);
+}
+
+.mode-card:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 2px;
+}
+
+.mode-card .tagline {
+    width: auto;
+    margin: 0;
+}
+
 .title {
     margin: 0 0 4px;
     font-size: 16px;
@@ -68,6 +113,14 @@ body {
 
 .title-right {
     color: var(--accent-right);
+}
+
+.title-a {
+    color: var(--accent-a);
+}
+
+.title-b {
+    color: var(--accent-b);
 }
 
 .pronunciation {
@@ -149,13 +202,21 @@ body {
     letter-spacing: 0.05em;
 }
 
-/* Color the two hands so the structure is visible at a glance. */
+/* Color the two words so the structure is visible at a glance. */
 .seg-left {
     color: var(--accent-left);
 }
 
 .seg-right {
     color: var(--accent-right);
+}
+
+.seg-a {
+    color: var(--accent-a);
+}
+
+.seg-b {
+    color: var(--accent-b);
 }
 
 .copy-btn {
@@ -192,6 +253,12 @@ body {
 .empty {
     color: var(--muted);
     padding: 24px 0;
+}
+
+@media (max-width: 480px) {
+    .mode-toggle {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 320px) {

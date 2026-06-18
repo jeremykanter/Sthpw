@@ -10,23 +10,56 @@
             href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="styles.css?v=5" />
+        <link rel="stylesheet" href="styles.css?v=6" />
     </head>
     <body>
         <main class="app">
             <header class="header">
-                <h1 class="title">
-                    <span class="title-left">Sth</span
-                    ><span class="title-right">pw</span>
-                </h1>
-                <p class="pronunciation">/ˈsaʊθˌpɔ/</p>
-                <div class="heading-divider"></div>
-                <p class="tagline">
-                    Memorable passwords divided between your
-                    <span class="title-left">left</span> and
-                    <span class="title-right">right</span>
-                    hands.
-                </p>
+                <div
+                    class="mode-toggle"
+                    role="tablist"
+                    aria-label="Password mode"
+                >
+                    <div
+                        id="mode-split"
+                        class="mode-card"
+                        role="tab"
+                        aria-selected="true"
+                        tabindex="0"
+                    >
+                        <h1 class="title">
+                            <span class="title-left">Sth</span
+                            ><span class="title-right">pw</span>
+                        </h1>
+                        <p class="pronunciation">/ˈsaʊθˌpɔ/</p>
+                        <div class="heading-divider"></div>
+                        <p class="tagline">
+                            Passwords split between the
+                            <span class="title-left">left</span> and
+                            <span class="title-right">right</span>
+                            half of the QWERTY keyboard
+                        </p>
+                    </div>
+
+                    <div
+                        id="mode-balanced"
+                        class="mode-card"
+                        role="tab"
+                        aria-selected="false"
+                        tabindex="-1"
+                    >
+                        <h1 class="title">
+                            <span class="title-a">Fst</span
+                            ><span class="title-b">bll</span>
+                        </h1>
+                        <p class="pronunciation">/ˈfæs(t)ˌbɔl/</p>
+                        <div class="heading-divider"></div>
+                        <p class="tagline">
+                            Passwords balanced across both halves of the
+                            keyboard to optimize for typing speed
+                        </p>
+                    </div>
+                </div>
             </header>
 
             <section class="controls" aria-label="Generator settings">
@@ -41,19 +74,17 @@
 
             <footer class="footer">
                 <p>
-                    Each half of the password uses only one hand on a QWERTY
-                    keyboard. Passwords are generated locally in your
-                    browser—nothing is stored or sent anywhere. These passwords
-                    are meant to be memorable and fun to type, but if security
-                    is your priority, please consider using a more robust
-                    password.
+                    All passwords are generated locally in your browser. Nothing
+                    is ever stored or sent anywhere. These passwords are meant
+                    to be memorable and fun to type. If security is your
+                    priority, please consider using a more robust password.
                 </p>
             </footer>
         </main>
 
         <!-- Word lists first, then app logic. Both plain <script> tags so the page
          works when opened directly from disk (file://) with no server. -->
-        <script src="wordlists.js"></script>
-        <script src="app.js?v=4"></script>
+        <script src="wordlists.js?v=2"></script>
+        <script src="app.js?v=6"></script>
     </body>
 </html>
