@@ -4,7 +4,7 @@ Passwords that are memorable and fun to type.
 
 Sthpw has two modes:
 - Sthpw mode, where passwords are split between the left and right halves of the keyboard
-- Fstball mode, where passwords are balanced across both halves of the keyboard to optimize for typing speed
+- Fstbll mode, where passwords are balanced across both halves of the keyboard to optimize for typing speed
 
 In both modes, passwords are composed of:
 - one **lowercase** word and number
